@@ -5,11 +5,16 @@
 </body>
 <template name="hello">
   {{> Template.dynamic template=t1}}
+  {{> Template.dynamic template=t2}}
 </template>
 <template name="home">
+  <table>
   {{#each people}}
-  {{name}}
-<br></br>
+  <tr><form class="deleteone"><td>{{_id}}</td><td>{{id}}</td><td>{{name}}</td><td><input type="hidden" name="id" value="{{_id}}"/></td><td><input type="submit" value="Supprimer"/></td></form></tr>
   {{/each}}
-<button>ilyass test</button>
+</table>
+<button>Add new here</button>
+</template>
+<template name="about">
+about here
 </template>

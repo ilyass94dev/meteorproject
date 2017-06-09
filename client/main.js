@@ -28,11 +28,18 @@ Template.home.helpers({
    },
 });
 Template.home.events({
-  'click button'(event, instance) {
+    'click button'(event, instance) {
     // increment the counter when button is clicked
     Template.instance().counter.set(Template.instance().counter.get()+1);
     let int=(Template.instance().counter.get());
     people.insert({"id":15,"name":"ilyass ben"});
     console.log(int);
-  }
+  },
+  'submit .deleteone'(event)
+   {
+    event.preventDefault();
+    console.log(event.target.id.value);
+    let id=event.target.id.value;
+    people.remove(id);
+   }
 });
