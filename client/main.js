@@ -39,7 +39,11 @@ Template.home.events({
    {
     event.preventDefault();
     console.log(event.target.id.value);
+    console.log(event.target.check.checked);
+    if(event.target.check.checked==true)
+    {
     let id=event.target.id.value;
     people.remove(id);
+    }
    }
 });

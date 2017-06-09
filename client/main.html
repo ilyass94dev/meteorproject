@@ -10,7 +10,15 @@
 <template name="home">
   <table>
   {{#each people}}
-  <tr><form class="deleteone"><td>{{_id}}</td><td>{{id}}</td><td>{{name}}</td><td><input type="hidden" name="id" value="{{_id}}"/></td><td><input type="submit" value="Supprimer"/></td></form></tr>
+ <tr>
+    <form class="deleteone">
+    <td>{{id}}</td>
+    <td>{{name}}</td>
+    <td><input type="checkbox" name="check"/></td>
+    <td><input type="hidden" name="id" value="{{_id}}"/></td>
+    <td><input type="submit" value="Supprimer"/></td>
+  </form>
+ </tr>
   {{/each}}
 </table>
 <button>Add new here</button>
