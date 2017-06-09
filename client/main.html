@@ -1,0 +1,15 @@
+<head>
+  <title>myfirstproject</title>
+</head>
+<body>
+</body>
+<template name="hello">
+  {{> Template.dynamic template=t1}}
+</template>
+<template name="home">
+  {{#each people}}
+  {{name}}
+<br></br>
+  {{/each}}
+<button>Click here</button>
+</template>
